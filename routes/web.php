@@ -19,7 +19,6 @@ Route::get('/', function () {
 
 // 127.0.0.1:8000/siswa ==> <h1>
 Route::get('/mahasiswa', function () {
-    return "<h1>SAYA MAHASISWA</h1>";
+    return "<h2>SAYA MAHASISWAA</h2>";
 });
 
-Route::()
