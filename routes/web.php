@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// 127.0.0.1:8000/siswa ==> <h1>
+Route::get('/mahasiswa', function () {
+    return "<h1>SAYA MAHASISWA</h1>";
+});
+
+Route::()
