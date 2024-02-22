@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Auth\Access;
@@ -32,5 +33,4 @@ Route::group(['namemspaace' => 'Frontend'], function() {
 Route::group(['namemspaace' => 'Backend'], function() {
     Route::resource('dashboard', DashboardController::class);
 });
-
 
