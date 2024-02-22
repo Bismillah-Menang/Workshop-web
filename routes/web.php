@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Auth\Access;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +20,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
 // 127.0.0.1:8000/siswa ==> <h1>
 Route::get('/mahasiswa', function () {
-    return "<h2>SAYA MAHASISWAA</h2>";
+    return "<h1>SAYA MAHASISWA</h1>";
 });
+
+Route::group(['namemspaace' => 'Frontend'], function() {
+    Route::resource('home', HomeController::class);
+});
+
+Route::group(['namemspaace' => 'Backend'], function() {
+    Route::resource('dashboard', DashboardController::class);
+});
+
 
